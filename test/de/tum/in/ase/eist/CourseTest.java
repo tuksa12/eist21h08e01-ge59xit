@@ -1,7 +1,6 @@
 package de.tum.in.ase.eist;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.Assert.*;
 
 public class CourseTest {
 
@@ -9,19 +8,19 @@ public class CourseTest {
     @Test
     public void testGetCourseTitle() {
         Course testCourse = new Course("Title");
-        assertEquals(testCourse.getCourseTitle(),"Title");
+        assert (testCourse.getCourseTitle().equals("Title"));
     }
 
 	// TODO 2: Test getNumberOfAttendees()
     @Test
     public void testNoAttendees() {
         Course testCourse = new Course("Title");
-        assertEquals(testCourse.getAttendees(), 0);
+        assert (testCourse.getAttendees().equals(0));
     }
 
     @Test
     public void testThreeAttendees() {
         Course testCourse = new Course("Title");
-        assertEquals(testCourse.getAttendees(), 3);
+        assert (testCourse.getAttendees().equals(3));
     }
 }

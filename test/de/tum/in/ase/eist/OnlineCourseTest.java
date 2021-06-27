@@ -4,8 +4,6 @@ import org.junit.jupiter.api.Test;
 
 import java.net.URL;
 
-import static org.junit.Assert.*;
-
 public class OnlineCourseTest {
 
 	// TODO 3: Test setOnlineCourseUrl()
@@ -15,7 +13,7 @@ public class OnlineCourseTest {
         try {
             URL url = new URL("http://www.example.com/docs/resource1.html");
             testOnline.setOnlineCourseUrl("http://www.example.com/docs/resource1.html");
-            assertEquals(testOnline.getOnlineCourseUrl(),url);
+            assert (testOnline.getOnlineCourseUrl().equals(url));
         } catch (Exception ignored) {
 
         }
@@ -27,7 +25,7 @@ public class OnlineCourseTest {
         try {
             testOnline.setOnlineCourseUrl("ocs/resource1.html");
         } catch (Exception ignored) {
-            assertEquals(1,1);
+            assert (true);
         }
     }
 }
