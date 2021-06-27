@@ -15,7 +15,7 @@ public class OnlineCourseTest {
             testOnline.setOnlineCourseUrl("http://www.example.com/docs/resource1.html");
             assert (testOnline.getOnlineCourseUrl().equals(url));
         } catch (Exception ignored) {
-
+            assert (false);
         }
     }
 
@@ -24,6 +24,7 @@ public class OnlineCourseTest {
         OnlineCourse testOnline = new OnlineCourse("Title");
         try {
             testOnline.setOnlineCourseUrl("ocs/resource1.html");
+            assert (false);
         } catch (Exception ignored) {
             assert (true);
         }
