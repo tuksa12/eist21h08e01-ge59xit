@@ -15,12 +15,12 @@ public class CourseTest {
     @Test
     public void testNoAttendees() {
         Course testCourse = new Course("Title");
-        assert (testCourse.getAttendees().equals(0));
+        assert (testCourse.getNumberOfAttendees() == 0);
     }
 
     @Test
     public void testThreeAttendees() {
         Course testCourse = new Course("Title");
-        assert (testCourse.getAttendees().equals(3));
+        assert (testCourse.getNumberOfAttendees() == 3);
     }
 }
